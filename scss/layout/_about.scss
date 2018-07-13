@@ -180,6 +180,12 @@
   font-size: 10.46px;
   font-family: 'TTDrugs Thin';
 
+  &--home {
+    width: 170px;
+    border: 2px solid #fff !important;
+    background: transparent !important;
+    color: #fff !important;
+  }
   &--white {
     position: relative;
     color: #000 !important;

@@ -9,7 +9,7 @@ body {
   flex-wrap: wrap;
   position: relative;
   z-index: 1;
-  overflow-x: hidden;
+  overflow: hidden;
 
   .header,
   .footer {
@@ -106,3 +106,15 @@ body {
   width: 100%;
 }
 
+.catalog-redirect {
+  width: 180px;
+  color: #fff;
+  position: absolute;
+  bottom: 100px;
+  left: 200px;
+
+  &__descriptions {
+    color: #fff;
+    margin-bottom: 15px;
+  }
+}
