@@ -1,0 +1,254 @@
+.about {
+  width: 100%;
+
+  &__blockquote {
+    margin-top: -100px;
+    position: relative;
+    z-index: -1;
+  }
+
+  &__main-text {
+    margin-top: -150px;
+    position: relative;
+    z-index: -2;
+  }
+
+  &__services {
+
+  }
+  &__subscribe {
+    margin-bottom: -80px;
+  }
+}
+
+.blockquote {
+  width: 100%;
+  height: 680px;
+  background: url('../img/about/pattern.png') no-repeat center;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__quote {
+    width: 505px;
+    height: 185px;
+    margin-top: -75px;
+    white-space: pre-line;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__autor {
+    white-space: pre-line;
+    font-size: 10px;
+    text-align: right;
+    margin-top: 45px;
+  }
+}
+
+.main-text {
+  width: 100%;
+  padding: 60px 0;
+  display: flex;
+  justify-content: center;
+
+  &__text {
+    text-align: center;
+    white-space: pre-line;
+    max-width: 480px;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: 'TTDrugs Thin';
+  }
+}
+
+.services {
+  width: 100%;
+  min-height: 680px;
+  padding-top: 2px;
+
+  &__wrapper {
+    display: inline-block;
+    position: relative;
+  }
+  &__slider {
+    height: 680px;
+    width: 575px;
+    position: relative;
+    margin-left: 130px;
+    .slick-list {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .slick-prev,
+    .slick-next {
+      position: absolute;
+      top: 15%;
+      z-index: 999;
+      background: transparent url("../img/icons/arrow-slider-brown.png") no-repeat center;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border:0;
+      outline: none;
+      cursor: pointer;
+      &:active,
+      &:hover {
+        outline: none;
+      }
+      &:before {
+        position: absolute;
+        content: '';
+        width: 70px;
+        height: 2px;
+        top: calc(50% - 1px);
+        left: -55px;
+      }
+    }
+    .slick-prev {
+      left: -75px;
+      transform: rotate(180deg);
+    }
+    .slick-next {
+      right: -75px;
+    }
+  }
+  &__photo-holder {
+    flex: 0 0 100%;
+    height: 680px;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+  }
+  &__photo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%) scale(.9);
+  }
+
+  &__card {
+    position: absolute;
+    bottom: 35px;
+    right: -52.5%;
+  }
+}
+
+.card {
+  width: 470px;
+  height: 315px;
+  padding: 1px;
+
+  &__info {
+    padding: 35px;
+    width: 100%;
+    height: 100%;
+  }
+  &__page {
+    font-size: 10.56px;
+    margin: 0 0 20px 0;
+    font-family: 'Playfair Display SC';
+  }
+  &__title {
+    font-size: 24.79px;
+    text-align: left;
+    margin: 0 0 25px 0;
+    font-family: 'Playfair Display SC';
+  }
+
+  &__text {
+    font-size: 8px;
+    white-space: pre-line;
+    margin: 0 0 25px 0;
+    font-family: 'TTDrugs Thin';
+    line-height: 9px;
+  }
+}
+
+.pro-decor-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 134px;
+  height: 40px;
+  text-transform: uppercase;
+  font-size: 10.46px;
+  font-family: 'TTDrugs Thin';
+
+  &--white {
+    position: relative;
+    color: #000 !important;
+    background: #fff url("../img/icons/button-border.png") no-repeat center !important;
+    padding: 1px;
+    background-size: contain !important;
+  }
+}
+
+.subscribe {
+  width: 100%;
+  min-height: 565px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    width: 575px;
+  }
+  &__text {
+    text-align: center;
+  }
+  &__pro-decor-input {
+
+  }
+}
+p.subscribe__text {
+  font-size: 22.07px;
+  font-family: 'Playfair Display SC';
+  line-height: 26px;
+  margin: 0;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: none;
+  margin-bottom: 20px;
+}
+.pro-decor-input {
+  position: relative;
+  min-width: 570px;
+  max-width: 1000px;
+  textarea.pro-decor-input__field {
+    padding-top: 16px;
+  }
+  &__field {
+    width: 100%;
+    min-width: 570px;
+    max-width: 1000px;
+    height: 43px;
+    border: 1px solid;
+    padding-left: 20px;
+    font-size: 9px;
+    font-weight: 900;
+    font-family: 'TTDrugs Thin';
+    outline: none;
+    &:active {
+      outline: none;
+    }
+    &:focus ~ .pro-decor-input__label {
+      opacity: 0;
+      pointer-events: none;
+    }
+  }
+  &__label {
+    width: 15px;
+    height: 1px;
+    display: flex;
+    position: absolute;
+    right: 30px;
+    top: calc(50% - .5px);
+    @include transition(all .5s ease);
+  }
+}

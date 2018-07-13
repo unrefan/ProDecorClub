@@ -1,0 +1,108 @@
+@import 'util/util';
+@import 'layout/layout';
+@import 'color-sheme/color-sheme';
+
+body {
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+
+  .header,
+  .footer {
+    position: relative;
+    z-index: 999;
+  }
+}
+
+.hexagon {
+  width: 500px;
+  height: 470px;
+  position: absolute;
+  left: calc(50% - 250px);
+  top: calc(50% - 235px);
+
+  &__border {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: url("../img/home/hex-border.png") no-repeat center;
+  }
+  span {
+    overflow: hidden;
+    display: block;
+  }
+  &__1 {
+    transform: rotate(30.5deg);
+    position: absolute;
+    top: 8.5%;
+    left: -28px;
+    width: 553px;
+    height: 454px;
+  }
+  &__2 {
+    transform: rotate(118.5deg);
+    width: 643px;
+    height: 452px;
+    position: absolute;
+    top: 9%;
+    left: -66px;
+  }
+  &__3 {
+    position: absolute;
+    width: 550px;
+    height: 490px;
+    transform: rotate(-75.5deg);
+    left: -7%;
+  }
+  &__4 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    transform: rotate(123.3deg);
+    left: 2%;
+    top: 12%;
+  }
+  &__5 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    transform: rotate(-30deg);
+    left: -9%;
+    top: 8%;
+  }
+  &__6 {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    transform: rotate(-63.9deg);
+    left: 5%;
+    top: 0.8%;
+  }
+  &__pic {
+    overflow: visible;
+    width: 100%;
+    height: 100%;
+    transform: rotate(-102.9deg) translate(5px, 35px);
+    position: relative;
+  }
+  &__clipped-pic {
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .1s linear;
+  }
+}
+
+.main {
+  width: 100%;
+}
+

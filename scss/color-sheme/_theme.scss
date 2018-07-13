@@ -1,0 +1,146 @@
+.menu.menu--home {
+  .menu__link {
+    color: $headerMenuHomeTC;
+    &:hover {
+      color: $headerMenuHomeTC;
+    }
+  }
+  .underline {
+    background: #fff;
+  }
+}
+.menu {
+  .underline {
+    background: #000;
+  }
+}
+
+.home-slideshow {
+  .slick-prev,
+  .slick-next {
+    //border-color: $arrowBorderColor;
+    &:after,
+    &:before {
+      background: rgba($arrowBC, .4);
+    }
+  }
+}
+
+.footer {
+  .f-socials {
+    &__item:nth-of-type(2) {
+      background-color: $socialsItemTC;
+    }
+    &__item, &__item a {
+      color: $socialsItemTC;
+    }
+  }
+  &__phone, &__phone a {
+    color: $phoneTC;
+  }
+}
+
+.footer--home {
+  .f-socials {
+    &__item:nth-of-type(2) {
+      background-color: $socialsItemHomeTC;
+    }
+    &__item, &__item a {
+      color: $socialsItemHomeTC;
+    }
+  }
+  .footer {
+    &__phone, &__phone a {
+      color: $phoneHomeTC;
+    }
+  }
+}
+
+.main-text {
+  background-color: $mainTextBC;
+}
+.card {
+  @include linearGradientToRight(nth($cardBorderColor, 1), nth($cardBorderColor, 2));
+  &__info {
+    background: $cardBodyBC;
+  }
+  &__title {
+    color: $cardTitleTC;
+  }
+}
+
+.pro-decor-btn,
+a.pro-decor-btn {
+  @include linearGradientToRight(nth($buttonBC, 1), nth($buttonBC, 2));
+  color: $buttonTC;
+
+  &--white {
+    &:before {
+
+    }
+  }
+}
+
+.subscribe {
+  background-color: $subscribeBC;
+  &__text {
+    color: $subscribeTC;
+  }
+  &__text {
+    color: $subscribeTC;
+  }
+}
+
+p.subscribe__text {
+  color: $subscribeTC;
+}
+
+.pro-decor-input {
+  &__field {
+    border-color: rgba($subscribeInputBorderColor, .4);
+    color: $subscribeInputTC;
+    background-color: $subscribeInputBC;
+  }
+  &__label {
+    @include linearGradientToRight(nth($labelBC, 1), nth($labelBC, 2));
+  }
+}
+
+.rent {
+  &__head {
+    background: $headBC;
+  }
+
+  &__subscribe {
+  }
+
+  &__text-holder {
+    background: $textHolderBC;
+  }
+}
+
+.services {
+  &__wrapper {
+  }
+  &__slider {
+    .slick-list {
+    }
+    .slick-prev,
+    .slick-next {
+      &:before {
+        background: $sliderArrowBC;
+      }
+    }
+    .slick-prev {
+    }
+    .slick-next {
+    }
+  }
+  &__photo-holder {
+  }
+  &__photo {
+  }
+
+  &__card {
+  }
+}

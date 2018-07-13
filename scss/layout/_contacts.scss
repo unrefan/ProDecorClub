@@ -1,0 +1,65 @@
+.contacts {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__wrapper {
+    margin-right: 35%;
+  }
+  &__background {
+    background: url("../img/contacts/pattern.png") no-repeat center;
+    width: 100vw;
+    height: 100vh;
+    background-size: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+  &__write-us {
+
+  }
+}
+
+.socials {
+  margin-bottom: 70px;
+  &__link {
+    cursor: pointer;
+    &:first-of-type {
+      margin-right: 15px;
+    }
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.phone {
+  &--contacts {
+    font-family: "Playfair Display";
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    .phone__number {
+      color: #000 !important;
+    }
+  }
+}
+
+.write-us {
+  &__title {
+    color: #000 !important;
+    font-family: "Playfair Display";
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  &__pro-decor-input {
+    margin-bottom: 7px;
+  }
+}
