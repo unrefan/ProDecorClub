@@ -1,5 +1,6 @@
 function removeDotsText(slide) {
   slide.on('init', function(e, slick){
+    mouseWheel(slide);
     var dots = slide.find('li button');
     dots.each(function(i, el){
       $(el).text('');
@@ -10,7 +11,20 @@ function removeDotsText(slide) {
 function sliderInit(slide, options) {
   slide.slick(options);
 }
-
+function mouseWheel($slider) {
+	$(window).on('wheel', { $slider: $slider }, mouseWheelHandler)
+}
+function mouseWheelHandler(event) {
+	event.preventDefault()
+	const $slider = event.data.$slider
+	const delta = event.originalEvent.deltaY
+	if(delta > 0) {
+		$slider.slick('slickPrev')
+	}
+	else {
+		$slider.slick('slickNext')
+	}
+}
 function sliderHomeChange(slide) {
   var pic = $('#hexagonPic');
   var pics = $('#home-slideshow').find('.home-slideshow__item .home-slideshow__background');
@@ -31,6 +45,7 @@ function homeSliderHandler() {
     slidesToShow: 1,
     slidesToScroll: 1,
     verticalSwiping: true,
+    speed: 1000,
     infinite: false,
     autoplay: true,
     prevArrow: '<button type="button" class="slick-prev"></button>',
@@ -118,8 +133,19 @@ function underlineAnimation() {
   });
 }
 
+function setWidthRentPattern() {
+  var rent = $('div.rent__pattern');
+  if(rent.length !== 0 ) {
+    var size = window.innerWidth;
+    size = size / 140;
+    size = Math.round(size);
+    size = (size - 2) * 138.85;
+    rent.css('width', size);
+  }
+}
 $(document).ready(function(){
   homeSliderHandler();
   aboutSliderHandler();
   underlineAnimation();
+  setWidthRentPattern();
 });
