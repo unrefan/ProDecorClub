@@ -128,6 +128,29 @@ src: url("../fonts/TTDrugsThin/TTDrugs-Thin.eot") format("eot"),
     url("../fonts/TTDrugsThin/TTDrugs-Thin.otf") format("otf"),
     url("../fonts/TTDrugsThin/TTDrugs-Thin.svg") format("svg"),
     url("../fonts/TTDrugsThin/TTDrugs-Thin.ttf") format("ttf"),
-    url("../fonts/TTDrugsThin/TTDrugs-Thin.woff") format("woff"),
-    url("../fonts/TTDrugsThin/TTDrugs-Thin.ttf") format("ttf")
+    url("../fonts/TTDrugsThin/TTDrugs-Thin.woff") format("woff")
+}
+
+//##################################################################### Denestina
+
+@font-face {
+font-family: "Denistina";
+src: url("../fonts/Denistina/denistina.eot") format("eot"),
+ url("../fonts/Denistina/denistina.svg") format("svg"),
+ url("../fonts/Denistina/denistina.ttf") format("ttf"),
+ url("../fonts/Denistina/denistina.woff") format("woff"),
+ url("../fonts/Denistina/denistina.woff2") format("woff2")
+
+}
+
+//##################################################################### Helios
+
+@font-face {
+font-family: "Helios";
+src: url("../fonts/Helios/HeliosCondLightC.eot") format("eot"),
+    url("../fonts/Helios/HELIOSCONDLIGHTC.otf") format("otf"),
+    url("../fonts/Helios/HeliosCondLightC.svg") format("svg"),
+    url("../fonts/Helios/HeliosCondLightC.ttf") format("ttf"),
+    url("../fonts/Helios/HeliosCondLightC.woff") format("woff"),
+    url("../fonts/Helios/HeliosCondLightC.ttf") format("woff2")
 }

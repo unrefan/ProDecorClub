@@ -19,7 +19,6 @@
   .slick-prev,
   .slick-next {
     //border-color: $arrowBorderColor;
-    &:after,
     &:before {
       background: rgba($arrowBC, .4);
     }
