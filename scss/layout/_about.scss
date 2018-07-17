@@ -22,60 +22,39 @@
 }
 
 .blockquote {
+  @include displayFlex();
+  @include alignItems(center);
+  @include justifyCenter();
+  @include flexDirection(column);
+
   width: 100%;
   min-height: 680px;
   background: url('../img/about/pattern.png') no-repeat center;
   background-size: 100% 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  @media screen and (min-width: $screen-xs) {
-    height: 450px;
-    min-height: 280px;
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    min-height: 480px;
   }
-  @media screen and (min-width: $screen-sm) {
-    height: 650px;
-  }
-  @media screen and (min-width: $screen-md) {
-    height: 650px;
-  }
-  @media screen and (min-width: $screen-lg) {
-    height: 1000px;
-  }
-  @media screen and (min-width: $screen-xl) {
-    height: 1100px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+
   }
   &__quote {
+    @include displayFlex();
+    @include flexDirection(column);
+
     width: 505px;
     height: 185px;
     margin-top: -75px;
     white-space: pre-line;
     font-size: 20px;
-    display: flex;
-    flex-direction: column;
     font-family: "Denistina";
-    @media screen and (min-width: $screen-xs) {
-      width: 305px;
-      margin-top: 0px;
-      margin-left: 60px;
-      font-size: 13px;
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      width: 100%;
+      padding: 0 30px;
+      font-size: 17px;
+      margin-top: 0;
     }
-    @media screen and (min-width: $screen-sm) {
-
-    }
-    @media screen and (min-width: $screen-md) {
-      margin-top: -75px;
-      margin-left: 75px;
-    }
-    @media screen and (min-width: $screen-lg) {
-      width: 505px;
-      margin-top: -150px;
-      margin-left: 200px;
-      font-size: 20px;
-    }
-    @media screen and (min-width: $screen-xl) {
-
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 350px;
     }
   }
 
@@ -92,10 +71,11 @@
 }
 
 .main-text {
+  @include displayFlex();
+  @include justifyCenter();
+
   width: 100%;
   padding: 60px 0;
-  display: flex;
-  justify-content: center;
 
   &__text {
     text-align: center;
@@ -111,7 +91,14 @@
   width: 100%;
   min-height: 680px;
   padding-top: 2px;
-
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    min-height: 1080px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include displayFlex();
+    @include justifyCenter();
+    min-height: 980px;
+  }
   &__wrapper {
     display: inline-block;
     position: relative;
@@ -121,6 +108,13 @@
     width: 575px;
     position: relative;
     margin-left: 130px;
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      margin-left: 0;
+      width: 100vw;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-left: 0;
+    }
     .slick-list {
       width: 100%;
       height: 100%;
@@ -138,6 +132,13 @@
       border:0;
       outline: none;
       cursor: pointer;
+      @media screen and (min-width: 0px) and (max-width: 767px) {
+        top: initial;
+        bottom: 65px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        top: 40%;
+      }
       &:active,
       &:hover {
         outline: none;
@@ -154,9 +155,15 @@
     .slick-prev {
       left: -75px;
       transform: rotate(180deg);
+      @media screen and (min-width: 0px) and (max-width: 767px) {
+        left: 20px;
+      }
     }
     .slick-next {
       right: -75px;
+      @media screen and (min-width: 0px) and (max-width: 767px) {
+        right: 20px;
+      }
     }
   }
   &__photo-holder {
@@ -178,6 +185,18 @@
     position: absolute;
     bottom: 35px;
     right: -52.5%;
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      right: 0;
+      bottom: -350px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 919px) {
+      bottom: 50px;
+      right: -50px;
+    }
+    @media screen and (min-width: 920px) and (max-width: 1199px) {
+      bottom: 50px;
+      right: -100px;
+    }
   }
 }
 
@@ -185,7 +204,10 @@
   width: 470px;
   height: 315px;
   padding: 1px;
-
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    width: 100%;
+    height: 380px;
+  }
   &__info {
     padding: 35px;
     width: 100%;
@@ -213,9 +235,10 @@
 }
 
 .pro-decor-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include displayFlex();
+  @include alignItems(center);
+  @include justifyCenter();
+
   width: 134px;
   height: 40px;
   text-transform: uppercase;
@@ -238,11 +261,12 @@
 }
 
 .subscribe {
+  @include displayFlex();
+  @include alignItems(center);
+  @include justifyCenter();
+
   width: 100%;
   min-height: 565px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   &__wrapper {
     width: 575px;
@@ -268,6 +292,12 @@ p.subscribe__text {
   position: relative;
   min-width: 570px;
   max-width: 1000px;
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    min-width: 100%;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+
+  }
   textarea.pro-decor-input__field {
     padding-top: 16px;
     resize: none;
@@ -291,6 +321,12 @@ p.subscribe__text {
     font-weight: 900;
     font-family: 'TTDrugs Thin';
     outline: none;
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      min-width: 100%;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+
+    }
     &:active {
       outline: none;
     }

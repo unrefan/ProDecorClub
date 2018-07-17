@@ -1,9 +1,9 @@
 .rent {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  @include displayFlex();
+  @include alignItems(center);
+  @include justifyCenter();
+  @include flexDirection(column);
 
   &__head {
     width: 100%;
@@ -21,6 +21,13 @@
     margin-top: -115px;
     position: relative;
     padding: 65px 30px 80px 30px;
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      max-width: 100%;
+      width: 100%;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+
+    }
   }
 
   &__title {
@@ -33,8 +40,16 @@
     font-size: 16px;
     font-weight: 600;
     color: #000;
-    display: flex;
+    @include displayFlex();
     margin-bottom: 90px;
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      display: block;
+    }
+  }
+  &__btn a {
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      margin-top: 15px;
+    }
   }
   &__pattern {
     position: absolute;

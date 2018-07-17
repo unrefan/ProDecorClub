@@ -1,11 +1,12 @@
 .header {
-  display: flex;
-  flex: 0 0 100%;
+  @include displayFlex();
+  @include flex(0, 0, 100%);
+  @include justifySpaceBetween();
+  @include alignItems(center);
+
   max-width: 100%;
   font-family: 'Playfair Display SC';
   font-size: 11.05px;
-  justify-content: space-between;
-  align-items: center;
   padding-top: 20px;
   height: 80px;
 
@@ -35,22 +36,139 @@
 }
 
 .menu {
-  display: flex;
-  padding-left: 0;
-  list-style-type: none;
-  position: relative;
-  @include transition(all .5s ease);
-
-  .underline {
-    position: absolute;
-    min-width: 20px;
-    height: 1px;
-    bottom: -7px;
-    opacity: 0;
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    margin-right: 35px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 85px;
+  }
+  &__items {
     @include transition(all .5s ease);
+    @include displayFlex();
+    padding-left: 0;
+    list-style-type: none;
+    position: relative;
+
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      @include flexDirection(column);
+      margin-top: 25px;
+      right: -200px;
+      position: absolute;
+      background: #fff;
+      padding: 0 15px;
+      box-shadow: 1px 2px 2px 2px rgba(0,0,0,.1);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include flexDirection(column);
+      margin-top: 25px;
+      right: -200px;
+      position: absolute;
+    }
+    .underline {
+      @include transition(all .5s ease);
+
+      position: absolute;
+      min-width: 20px;
+      height: 1px;
+      bottom: -7px;
+      opacity: 0;
+
+    }
+  }
+
+  &__control {
+    display: none;
+    &:checked ~ .menu__items {
+      right: 0;
+    }
+    &:checked ~ .menu__hum {
+      transform: rotate(90deg);
+      // animation-name: spin;
+      // animation-duration: .5s;
+
+      // @include keyframes(spin) {
+      //   0% {
+      //     border: 2px solid transparent;
+      //     border-top: 2px solid #fff;
+      //   }
+      //   50% {
+      //     border: 2px solid transparent;
+      //     border-top: 2px solid #fff;
+      //   }
+      //   100% {
+      //     border: 2px solid #fff;
+      //   }
+      // }
+    }
+    &:checked ~ .menu__hum span {
+      &:nth-of-type(1) { transform: rotate(-60deg); top: 11px; width: 36%; left: 4px; }
+      &:nth-of-type(2) { transform: rotate(10deg); top: 7px; width: 30%; left: 14px; }
+      &:nth-of-type(3) { transform: rotate(60deg); top: 22px; width: 36%; left: 4px; }
+
+      &:nth-of-type(4) { transform: rotate(65deg); top: 12px; width: 26.4%; left: 22px; }
+      &:nth-of-type(5) { transform: rotate(-10deg); top: 26px; width: 30%; left: 14px; }
+      &:nth-of-type(6) { transform: rotate(-70deg); top: 21px; width: 26.4%; left: 22px; }
+    }
+  }
+  &__hum {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    @include transition(all 1.2s ease);
+    display: none;
+
+    &:active {
+      outline: none;
+    }
+    span {
+      display: block;
+      width: 25%;
+      height: 2px;
+      position: absolute;
+      @include transition(all .5s ease);
+      &:nth-of-type(odd) {
+        left: 9.3px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      &:nth-of-type(even) {
+        left: calc(9.3px + 25%);
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      &:nth-of-type(1),
+      &:nth-of-type(2) {
+        top: 12px;
+      }
+      &:nth-of-type(3),
+      &:nth-of-type(4) {
+        top: 17px;
+      }
+      &:nth-of-type(5),
+      &:nth-of-type(6) {
+        top: 22px;
+      }
+    }
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      display: block;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      display: block;
+    }
   }
   &__item.active ~ .underline {
-    opacity: 1;
+    animation-name: opacit;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
+    @include keyframes(opacit) {
+      0% { opacity: 0; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
   }
   &__item {
     margin-right: 75px;
@@ -59,6 +177,14 @@
     }
     &:hover ~ .underline {
       opacity: 1;
+    }
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      margin-right: 25px;
+      margin-bottom: 15px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      margin-right: 25px;
+      margin-bottom: 15px;
     }
   }
 

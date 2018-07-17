@@ -135,7 +135,8 @@
   }
 
   &__item {
-    width: 100%;
+    width: 100vw;
+    height: 100vh;
     position: relative;
   }
   &__background.noblur {
@@ -147,12 +148,16 @@
   }
   &__background {
     padding: 0;
-    width: 100%;
-    -webkit-filter: blur(30px);
-     -moz-filter: blur(30px);
-       -o-filter: blur(30px);
-      -ms-filter: blur(30px);
-          filter: blur(30px);
-    transform: scale(1.02);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    -webkit-filter: blur(20px);
+     -moz-filter: blur(20px);
+       -o-filter: blur(20px);
+      -ms-filter: blur(20px);
+          filter: blur(20px);
+    transform: translate(-50%, -50%) scale(1.02);
   }
 }

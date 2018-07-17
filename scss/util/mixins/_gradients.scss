@@ -1,15 +1,4 @@
-@mixin make-grid() {
-  @supports(display: grid) {
-    display: grid;
-    display: -ms-grid;
-  }
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-}
-
+//################################################### gradient
 @mixin linearGradientToBottom($fromColor, $toColor) {
   background: $fromColor; /* Old browsers */
   background: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor));
@@ -28,10 +17,4 @@
   background: -o-linear-gradient(left, $fromColor, $toColor);
   background: linear-gradient(to right, $fromColor 0%,$toColor 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=$fromColor, endColorstr=$toColor,GradientType=1 ); /* IE6-9 */
-}
-
-@mixin transition($value) {
-  -webkit-transition: $value;
-  -o-transition: $value;
-  transition: $value;
 }

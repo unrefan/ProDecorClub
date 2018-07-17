@@ -1,0 +1,85 @@
+//################################################### display
+@mixin displayFlex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+//################################################### flex
+@mixin flex($grow: 0, $shrink: 1, $basis: auto) {
+  -webkit-box-flex: $grow;
+  -ms-flex: $grow $shrink $basis;
+      flex: $grow $shrink $basis;
+}
+
+//################################################### flex aligns
+
+// baseline / center / stretch
+@mixin alignItems($align) { // exept flex-start / flex-end
+  -webkit-box-align: $align;
+      -ms-flex-align: $align;
+          align-items: $align;
+}
+
+@mixin alignItemsStart() {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@mixin alignItemsEnd() {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+@mixin justifySpaceBetween() {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@mixin justifyStart() {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+@mixin justifyEnd() {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@mixin justifyCenter() {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@mixin justify($justify) {
+  -webkit-box-pack: $justify;
+      -ms-flex-pack: $justify;
+          justify-content: $justify;
+}
+
+// ########################################### direction
+
+@mixin flexDirection($direction) {
+  @if $direction == row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+  } @else if $direction == row-reverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+  } @else if $direction == column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+  } @else if $direction == column-reverse {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+  }
+
+  -ms-flex-direction: $direction;
+        flex-direction: $direction;
+}

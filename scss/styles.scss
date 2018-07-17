@@ -1,6 +1,10 @@
-@import 'util/util';
-@import 'layout/layout';
-@import 'color-sheme/color-sheme';
+@import 'util/$util';
+@import 'layout/$layout';
+@import 'color-sheme/$color-sheme';
+
+html {
+  overflow-x: hidden;
+}
 
 body {
   padding: 0;
@@ -181,7 +185,7 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(.8);
-    transition: all 1s ease;
+    transition: all .9s ease;
   }
 }
 .main {
@@ -198,5 +202,19 @@ body {
   &__descriptions {
     color: #fff;
     margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+  }
+  &__back {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(0,0,0,.4);
+    position: absolute;
+    top: 10px;
+    left: -5px;
+    z-index: -1;
+    transform: scale(1.5);
+    filter: blur(10px);
   }
 }
