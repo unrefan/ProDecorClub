@@ -87,6 +87,7 @@
     transform: rotate(180deg);
     @media screen and (min-width: 0px) and (max-width: 767px) {
       transform: rotate(180deg) scale(.5);
+      top: 40%;
     }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       transform: rotate(180deg) scale(.8);
@@ -116,7 +117,7 @@
     top: calc(35% + 200px);
     @media screen and (min-width: 0px) and (max-width: 767px) {
       transform: scale(.5);
-      top: calc(35% + 100px);
+      top: calc(40% + 100px);
     }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       transform: scale(.8);

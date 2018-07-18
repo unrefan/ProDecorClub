@@ -112,7 +112,6 @@ body {
   left: calc(50% - 250px);
   top: calc(50% - 235px);
   transform: scale(1.4);
-  z-index: -1;
   @media screen and (min-width: 0px) and (max-width: 767px) {
     transform: scale(.4);
   }

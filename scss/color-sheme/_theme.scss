@@ -78,12 +78,18 @@
   background-color: $mainTextBC;
 }
 .card {
-  @include linearGradientToRight(nth($cardBorderColor, 1), nth($cardBorderColor, 2));
+  //@include linearGradientToRight(nth($cardBorderColor, 1), nth($cardBorderColor, 2));
   &__info {
     background: $cardBodyBC;
   }
   &__title {
     color: $cardTitleTC;
+  }
+  &__page {
+    &:before,
+    &:after {
+      @include linearGradientToRight(nth($cardBorderColor, 1), nth($cardBorderColor, 2));
+    }
   }
 }
 
@@ -160,5 +166,19 @@ p.subscribe__text {
   }
 
   &__card {
+  }
+}
+
+.category {
+  background: $potPourri;
+
+  &__wrapper {
+  }
+}
+
+.products {
+  background: #fff;
+
+  &__wrapper {
   }
 }

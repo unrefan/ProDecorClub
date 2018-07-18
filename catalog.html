@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="./css/styles.css?v=0.0.0.1" />
+  <title>Pro Decor</title>
+</head>
+<body>
+
+<!-- BEGIN: header -->
+  <header class="header">
+    <div class="logo header__logo">
+      <a href="./index.html" class="logo__link">
+          <span class="logo__icon"></span>
+      </a>
+    </div>
+    <div class="menu header__menu">
+        <input type="checkbox" id="hum"  class="menu__control"/>
+        <label for="hum" class="menu__hum">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <ul class="menu__items">
+          <li class="menu__item"><a href="./about.html" class="menu__link">О нас</a></li>
+          <li class="menu__item active"><a href="#" class="menu__link">каталог</a></li>
+          <li class="menu__item"><a href="./rent.html" class="menu__link">Условия аренды</a></li>
+          <li class="menu__item active"><a href="./contacts.html" class="menu__link">контакты</a></li>
+          <div class="underline"></div>
+        </ul>
+    </div>
+  </header>
+<!-- END: header -->
+
+<!-- BEGIN: catalog -->
+<section class="catalog">
+  <div class="category catalog__category">
+    <div class="category__wrapper">
+      <div class="category__expand-list-holder">
+        <select class="expand-list category__expand-list" name="category" id="category">
+          <option value="arcs">Арки</option>
+          <option value="vases">Вазы</option>
+          <option value="trees">Деревья</option>
+          <option value="candlestick">Подсвечники</option>
+          <option value="curbstone">Стойки/тумбы</option>
+          <option value="photozone">Фотозоны</option>
+        </select>
+      </div>
+
+      <div class="category__sort-holder">
+        <select class="sort category__sort" name="category" id="category">
+          <option value="arcs">Сортировать по</option>
+          <option value="arcs">Цена по возрастанию</option>
+          <option value="candlestick">Цена по убыванию</option>
+          <option value="vases">Дате</option>
+          <option value="trees">Популярности</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="products catalog__products">
+    <div class="products__wrapper">
+      <figure class="p-card products__p-card">
+        <picture class="p-card__photo">
+          <img src="" alt="product" />
+        </picture>
+        <figcaption class="p-card__name">Diamonds</figcaption>
+        <figcaption class="p-card__price">3 500 grn</figcaption>
+      </figure>
+
+      <figure class="p-card products__p-card">
+        <picture class="p-card__photo">
+          <img src="" alt="product" />
+        </picture>
+        <figcaption class="p-card__name">Diamonds</figcaption>
+        <figcaption class="p-card__price">3 500 grn</figcaption>
+      </figure>
+    </div>
+
+    <div class="products__wrapper">
+      <figure class="p-card p-card--thin products__p-card">
+        <picture class="p-card__photo">
+          <img src="" alt="product" />
+        </picture>
+        <figcaption class="p-card__name">Diamonds</figcaption>
+        <figcaption class="p-card__price">3 500 grn</figcaption>
+      </figure>
+
+      <figure class="p-card p-card--thin products__p-card">
+        <picture class="p-card__photo">
+          <img src="" alt="product" />
+        </picture>
+        <figcaption class="p-card__name">Diamonds</figcaption>
+        <figcaption class="p-card__price">3 500 grn</figcaption>
+      </figure>
+
+      <figure class="p-card p-card--thin products__p-card">
+        <picture class="p-card__photo">
+          <img src="" alt="product" />
+        </picture>
+        <figcaption class="p-card__name">Diamonds</figcaption>
+        <figcaption class="p-card__price">3 500 grn</figcaption>
+      </figure>
+
+      <figure class="p-card p-card--thin products__p-card">
+        <picture class="p-card__photo">
+          <img src="" alt="product" />
+        </picture>
+        <figcaption class="p-card__name">Diamonds</figcaption>
+        <figcaption class="p-card__price">3 500 grn</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="subscribe rent__subscribe">
+    <div class="subscribe__wrapper">
+      <p class="subscribe__text">Подпишитесь на новостную рассылку,
+          чтобы первыми узнавать о наших новинках!</p>
+
+      <div class="pro-decor-input subscribe__pro-decor-input">
+        <input id="proDecorEmail" class="pro-decor-input__field" type="email" placeholder="email" />
+        <label for="proDecorEmail" class="pro-decor-input__label"></label>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- END: catalog -->
+
+<!-- BEGIN: footer -->
+<footer class="footer">
+  <div class="phone footer__phone">
+    <a href="tel:+3 8096 796 77 07" class="phone__number">+3 8096 796 77 07</a>
+  </div>
+  <ul class="f-socials footer__f-socials">
+    <li class="f-socials__item"><a href="#" class="f-socials__link">Подпишитесь на нас в соц сетях</a></li>
+    <li class="f-socials__item"></li>
+    <li class="f-socials__item"><a href="https://www.facebook.com/prodecroclub.com.ua/" class="f-socials__link">facebook</a></li>
+    <li class="f-socials__item"><a href="https://www.instagram.com/prodecorclub/" class="f-socials__link">instagram</a></li>
+  </ul>
+</footer>
+<!-- END: footer -->
+<script src="./js/plugins/jquery-3.3.1.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

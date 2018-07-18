@@ -133,18 +133,18 @@
   &__wrapper {
     display: inline-block;
     position: relative;
+    @include displayFlex();
+    @include justifyCenter();
   }
   &__slider {
     height: 680px;
     width: 575px;
     position: relative;
-    margin-left: 130px;
     @media screen and (min-width: 0px) and (max-width: 767px) {
-      margin-left: 0;
       width: 100vw;
     }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
-      margin-left: 0;
+
     }
     .slick-list {
       width: 100%;
@@ -154,7 +154,7 @@
     .slick-prev,
     .slick-next {
       position: absolute;
-      top: 15%;
+      bottom: 100px;
       z-index: 999;
       background: transparent url("../img/icons/arrow-slider-brown.png") no-repeat center;
       width: 70px;
@@ -213,28 +213,24 @@
   }
 
   &__card {
-    position: absolute;
-    bottom: 35px;
-    right: -52.5%;
+
     @media screen and (min-width: 0px) and (max-width: 767px) {
-      right: 0;
-      bottom: -350px;
+
     }
     @media screen and (min-width: 768px) and (max-width: 919px) {
-      bottom: 50px;
-      right: -50px;
+
     }
     @media screen and (min-width: 920px) and (max-width: 1199px) {
-      bottom: 50px;
-      right: -100px;
+
     }
   }
 }
 
 .card {
   width: 470px;
-  height: 315px;
+  height: 100%;
   padding: 1px;
+  padding-top: 30px;
   @media screen and (min-width: 0px) and (max-width: 767px) {
     width: 100%;
     height: 380px;
@@ -245,9 +241,25 @@
     height: 100%;
   }
   &__page {
-    font-size: 10.56px;
-    margin: 0 0 20px 0;
+    display: inline-block;
+    font-size: 14px;
+    margin: 0 0 20px 25px;
     font-family: 'Playfair Display SC';
+    position: relative;
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      top: calc(50% - .5px);
+      width: 20px;
+      height: 1px;
+    }
+    &:before {
+      left: -22px;
+    }
+    &:after {
+      right: -22px;
+    }
   }
   &__title {
     font-size: 24.79px;
@@ -257,11 +269,16 @@
   }
 
   &__text {
-    font-size: 8px;
+    font-size: 14px;
     white-space: pre-line;
     margin: 0 0 25px 0;
     font-family: 'TTDrugs Thin';
-    line-height: 9px;
+    color: #000;
+  }
+  &__pro-decor-btn {
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 40px;
   }
 }
 
