@@ -112,6 +112,13 @@ body {
   left: calc(50% - 250px);
   top: calc(50% - 235px);
   transform: scale(1.4);
+  z-index: -1;
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    transform: scale(.4);
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    transform: scale(1);
+  }
   &__border {
     position: absolute;
     width: 100%;
@@ -179,13 +186,19 @@ body {
   }
   &__clipped-pic {
     padding: 0;
-    width: 100vw;
+    width: initial;
     height: 100vh;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) scale(.8);
     transition: all .9s ease;
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      transform: translate(-50%, -50%) scale(1);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      transform: translate(-50%, -50%) scale(1);
+    }
   }
 }
 .main {
@@ -198,7 +211,22 @@ body {
   position: absolute;
   bottom: 100px;
   left: 200px;
-
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    text-align: center;
+    left: calc(50% - 90px);
+    transform: scale(.5);
+    a {
+      margin: 0 auto;
+    }
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    width: 250px;
+    text-align: center;
+    left: calc(50% - 125px);
+    a {
+      margin: 0 auto;
+    }
+  }
   &__descriptions {
     color: #fff;
     margin-bottom: 15px;

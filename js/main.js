@@ -43,6 +43,15 @@ function sliderHomeChangeTranslate(slide) {
   var arrow_prev = $('#home-slideshow').find('button.slick-prev');
   var tmp = '';
   var curentSlide = 1;
+  var scale = 'scale(.7)';
+  var step = 75;
+
+  // if(window.innerWidth >= 768 && window.innerWidth < 1200) {
+  //    scale = 'scale(1)';
+  // } else if (window.innerWidth >= 0 && window.innerWidth < 768) {
+  //   scale = 'scale(2.4)';
+  //   step = 175;
+  // }
 
   slide.on('beforeChange', function(e, slick, cSlide, nextSlide){
     if(nextSlide - cSlide > 0) {
@@ -54,8 +63,8 @@ function sliderHomeChangeTranslate(slide) {
 
   function translateUp() {
     pics.each(function(i, el){
-      tr[i] -= 75;
-      tmp = 'translate(-50%, ' + tr[i] + '%) scale(.7)';
+      tr[i] -= step; // 75
+      tmp = 'translate(-50%, ' + tr[i] + '%)' + scale;
       $(el).css({
         'transform': tmp
       });
@@ -64,8 +73,8 @@ function sliderHomeChangeTranslate(slide) {
 
   function translateDown() {
     pics.each(function(i, el){
-      tr[i] += 75;
-      tmp = 'translate(-50%, ' + tr[i] + '%) scale(.7)';
+      tr[i] += step; // 75
+      tmp = 'translate(-50%, ' + tr[i] + '%)' + scale;
       $(el).css({
         'transform': tmp
       });
@@ -76,13 +85,23 @@ function setTranslateY() {
   var pics = $('.hexagon2').find('img.hexagon2__clipped-pic');
   var tmp = '';
   var t = -50;
+  var scale = 'scale(.7)';
+  var step = 75;
   tr.push(t);
+
+  // if(window.innerWidth >= 768 && window.innerWidth < 1200) {
+  //   scale = 'scale(1)';
+  // } //else if (window.innerWidth >= 0 && window.innerWidth < 768) {
+  //   scale = 'scale(2.4)';
+  //   step = 175;
+  // }
+
   pics.each(function(i, el){
-    tmp = 'translate(-50%, ' + t + '%) scale(.7)';
+    tmp = 'translate(-50%, ' + t + '%)' + scale;
     $(el).css({
       'transform': tmp
     });
-    t += 75;
+    t += step;// 75
     tr.push(t);
   });
 }
@@ -301,21 +320,39 @@ function paralax() {
   var paralax = hexagon.find('span.hexagon2__pic');
   var x = 0, y = 0, tmp = '';
 
-
-
   if(hexagon.length === 0) return;
   hexagon.on('mousemove', function(e){
     var rect = paralax[0].getBoundingClientRect();
     var width   = rect.width / 2;
 		var	height	= rect.height / 2;
-		var	reduceX	= 16;
-		var	reduceY = 10;
-		x= Math.round((( e.pageX - rect.left ) - width) / reduceX) * -1;
-		y= Math.round((( e.pageY - rect.top ) - height) / reduceY) * -1;
+		var	reduceX	= 100;
+		var	reduceY = 50;
+		x= Math.round((( e.pageX - rect.left) - width) / reduceX) * -1 + 8;
+		y= Math.round((( e.pageY - rect.top) - height) / reduceY) * -1 + 35;
     tmp = 'rotate(-102.9deg) translate('+ x +'px, ' + y + 'px)';
     paralax.css({
       'transform': tmp
     });
+  });
+}
+
+function closeMenu() {
+  var hum = $('header.header .menu__control');
+  var label = $('header.header .menu__hum');
+  var checked = false;
+  if(hum.length === 0) return;
+  label.on('click', function(e){
+    e.stopPropagation();
+    hum[0].checked = checked;
+    checked = !checked;
+  });
+  $(document).on('click', function(e){
+    if($(e.target).hasClass('menu__control')) return;
+    if($(e.target).hasClass('menu__items')) return;
+    if($(e.target).hasClass('menu__item')) return;
+
+    hum[0].checked = false;
+    checked = false;
   });
 }
 
@@ -325,6 +362,5 @@ $(document).ready(function(){
   underlineAnimation();
   setWidthRentPattern();
   paralax();
-  //setCanvas();
-  //createImg();
+  closeMenu();
 });

@@ -34,8 +34,20 @@
   @media screen and (min-width: 0px) and (max-width: 767px) {
     min-height: 480px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 919px) {
+    min-height: 480px;
+  }
+  @media screen and (min-width: 920px) and (max-width: 1199px) {
 
+  }
+  @media screen and (min-width: 1200px) and (max-width: 1499px) {
+    min-height: 880px;
+  }
+  @media screen and (min-width: 1500px) and (max-width: 1919px) {
+    min-height: 880px;
+  }
+  @media screen and (min-width: 1920px) {
+    min-height: 1080px;
   }
   &__quote {
     @include displayFlex();
@@ -45,7 +57,7 @@
     height: 185px;
     margin-top: -75px;
     white-space: pre-line;
-    font-size: 20px;
+    font-size: 25px;
     font-family: "Denistina";
     @media screen and (min-width: 0px) and (max-width: 767px) {
       width: 100%;
@@ -53,8 +65,27 @@
       font-size: 17px;
       margin-top: 0;
     }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 768px) and (max-width: 919px) {
+      width: 285px;
+      height: 130px;
+      font-size: 15px;
+    }
+    @media screen and (min-width: 920px) and (max-width: 1199px) {
       width: 350px;
+      font-size: 20px;
+    }
+    @media screen and (min-width: 1200px) and (max-width: 1499px) {
+      margin-top: -160px;
+      margin-left: 100px;
+    }
+    @media screen and (min-width: 1500px) and (max-width: 1919px) {
+      margin-top: -150px;
+      margin-left: 150px;
+    }
+    @media screen and (min-width: 1920px) {
+      margin-top: -255px;
+      margin-left: 150px;
+      font-size: 27px;
     }
   }
 
@@ -287,6 +318,9 @@ p.subscribe__text {
   letter-spacing: .5px;
   text-transform: none;
   margin-bottom: 20px;
+  @media screen and (min-width: 0px) and (max-width: 767px) {
+    font-size: 15.07px;
+  }
 }
 .pro-decor-input {
   position: relative;

@@ -25,6 +25,12 @@
     border-radius: 50%;
     border:0;
     outline: none;
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      left: 0;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      left: 20px;
+    }
     cursor: pointer;
     &:active,
     &:hover {
@@ -52,6 +58,12 @@
   .slick-next.slick-disabled:active {
     &:active {
       transform: translateY(0);
+      @media screen and (min-width: 0px) and (max-width: 767px) {
+        transform: scale(.5) translateY(0);
+      }
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        transform: scale(.8) translateY(0);
+      }
     }
     &:active .slick-next:before {
       transform: translateY(0);
@@ -60,6 +72,12 @@
   .slick-prev.slick-disabled:active {
     &:active {
       transform: rotate(180deg) translateY(0);
+      @media screen and (min-width: 0px) and (max-width: 767px) {
+        transform: scale(.5) rotate(180deg) translateY(0);
+      }
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        transform: scale(.8) rotate(180deg) translateY(0);
+      }
     }
     &:active .slick-prev:before {
       transform: translateY(0);
@@ -67,6 +85,12 @@
   }
   .slick-prev {
     transform: rotate(180deg);
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      transform: rotate(180deg) scale(.5);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      transform: rotate(180deg) scale(.8);
+    }
     &:before {
       position: absolute;
       content: '';
@@ -76,7 +100,13 @@
       left: calc(50% - 1px);
     }
     &:active {
-      transform: rotate(180deg) translateY(-3px);
+      transform: rotate(180deg) translateY(3px);
+      @media screen and (min-width: 0px) and (max-width: 767px) {
+        transform: rotate(180deg) scale(.5) translateY(3px);
+      }
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        transform: rotate(180deg) scale(.8) translateY(3px);
+      }
     }
     &:active .slick-prev:before {
       transform: translateY(3px);
@@ -84,6 +114,13 @@
   }
   .slick-next {
     top: calc(35% + 200px);
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      transform: scale(.5);
+      top: calc(35% + 100px);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      transform: scale(.8);
+    }
     &:before {
       position: absolute;
       content: '';
@@ -94,9 +131,16 @@
     }
     &:active {
       transform: translateY(3px);
+      @media screen and (min-width: 0px) and (max-width: 767px) {
+        transform: scale(.5) translateY(3px);
+      }
+      @media screen and (min-width: 768px) and (max-width: 1199px) {
+        transform: scale(.8) translateY(3px);
+      }
     }
     &:active .slick-next:before {
       transform: translateY(-3px);
+
     }
   }
 
@@ -135,7 +179,7 @@
   }
 
   &__item {
-    width: 100vw;
+    width: 100vw !important;
     height: 100vh;
     position: relative;
   }
@@ -159,5 +203,11 @@
       -ms-filter: blur(20px);
           filter: blur(20px);
     transform: translate(-50%, -50%) scale(1.02);
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      width: initial;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: initial;
+    }
   }
 }

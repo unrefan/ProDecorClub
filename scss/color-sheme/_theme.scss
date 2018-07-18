@@ -5,6 +5,14 @@
       color: $headerMenuHomeTC;
     }
   }
+  .menu__items {
+    @media screen and (min-width: 0px) and (max-width: 767px) {
+      background: rgba(0,0,0, .5);
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      background: rgba(0,0,0, .5);
+    }
+  }
   .menu__hum {
     border: 2px solid #fff;
     span {
