@@ -1,5 +1,53 @@
+//################################### common
+.pro-decor-btn,
+a.pro-decor-btn {
+  @include linearGradientToRight(nth($buttonBC, 1), nth($buttonBC, 2));
+  color: $buttonTC;
+
+  &--home {
+    border-color:  #fff;
+    background: transparent;
+    color: #fff;
+  }
+  &--white {
+    color: #000;
+    background: #fff url("../img/icons/button-border.png") no-repeat center;
+    &:hover {
+      color: #fff;
+      @include linearGradientToRight( nth($buttonBC, 1), nth($buttonBC, 2) );
+    }
+  }
+}
+
+.subscribe {
+  background-color: $subscribeBC;
+  &__text {
+    color: $subscribeTC;
+  }
+  &__text {
+    color: $subscribeTC;
+  }
+}
+
+p.subscribe__text {
+  color: $subscribeTC;
+}
+
+.pro-decor-input {
+  &__field {
+    border-color: rgba($subscribeInputBorderColor, .4);
+    color: $subscribeInputTC;
+    background-color: $subscribeInputBC;
+  }
+  &__label {
+    @include linearGradientToRight(nth($labelBC, 1), nth($labelBC, 2));
+  }
+}
+
 .menu.menu--home {
-  .menu__link {
+  .menu__link,
+  .menu__link:visited,
+  .menu__link:link {
     color: $headerMenuHomeTC;
     &:hover {
       color: $headerMenuHomeTC;
@@ -33,14 +81,10 @@
   .underline {
     background: #000;
   }
-}
-.home-slideshow {
-  .slick-prev,
-  .slick-next {
-    //border-color: $arrowBorderColor;
-    &:before {
-      background: rgba($arrowBC, .4);
-    }
+  &__link,
+  &__link:visited,
+  &__link:link {
+    color: #000;
   }
 }
 
@@ -74,6 +118,18 @@
   }
 }
 
+//########################### home
+.home-slideshow {
+  .slick-prev,
+  .slick-next {
+    //border-color: $arrowBorderColor;
+    &:before {
+      background: rgba($arrowBC, .4);
+    }
+  }
+}
+
+//########################## about
 .main-text {
   background-color: $mainTextBC;
 }
@@ -88,54 +144,26 @@
   &__page {
     &:before,
     &:after {
-      @include linearGradientToRight(nth($cardBorderColor, 1), nth($cardBorderColor, 2));
+      @include linearGradientToRight( $cardBorderColor1, $cardBorderColor2 );
+    }
+  }
+}
+.services {
+  &__slider {
+    .slick-prev,
+    .slick-next {
+      &:before {
+        background: $sliderArrowBC;
+      }
     }
   }
 }
 
-.pro-decor-btn,
-a.pro-decor-btn {
-  @include linearGradientToRight(nth($buttonBC, 1), nth($buttonBC, 2));
-  color: $buttonTC;
-
-  &--white {
-    &:before {
-
-    }
-  }
-}
-
-.subscribe {
-  background-color: $subscribeBC;
-  &__text {
-    color: $subscribeTC;
-  }
-  &__text {
-    color: $subscribeTC;
-  }
-}
-
-p.subscribe__text {
-  color: $subscribeTC;
-}
-
-.pro-decor-input {
-  &__field {
-    border-color: rgba($subscribeInputBorderColor, .4);
-    color: $subscribeInputTC;
-    background-color: $subscribeInputBC;
-  }
-  &__label {
-    @include linearGradientToRight(nth($labelBC, 1), nth($labelBC, 2));
-  }
-}
+//####################### rent
 
 .rent {
   &__head {
     background: $headBC;
-  }
-
-  &__subscribe {
   }
 
   &__text-holder {
@@ -143,42 +171,72 @@ p.subscribe__text {
   }
 }
 
-.services {
-  &__wrapper {
-  }
-  &__slider {
-    .slick-list {
-    }
-    .slick-prev,
-    .slick-next {
-      &:before {
-        background: $sliderArrowBC;
+//####################### category
+.category {
+  background: $headBC;
+
+  &__expand-list-holder {
+    .select2-container {
+      .select2-results {
+        &__options {
+          background: $potPourri;
+          border: 2px solid $potPourri;
+          box-shadow: 0px 2px 2px 2px rgba(0,0,0,.2);
+        }
       }
     }
-    .slick-prev {
+  }
+  &__sort-holder {
+    .select2-container {
+      .select2-results {
+        &__options {
+          background: $potPourri;
+          border: 2px solid $potPourri;
+          box-shadow: 0px 2px 2px 2px rgba(0,0,0,.2);
+        }
+        &__option {
+          color: $spicyMix;
+        }
+      }
     }
-    .slick-next {
-    }
-  }
-  &__photo-holder {
-  }
-  &__photo {
-  }
-
-  &__card {
-  }
-}
-
-.category {
-  background: $potPourri;
-
-  &__wrapper {
   }
 }
 
 .products {
-  background: #fff;
+  background: $productBC;
+}
 
-  &__wrapper {
+.p-card {
+  &__photo {
+    border-color: $cardBorderColor;
+  }
+}
+
+.sort + .select2-container {
+  .selection {
+    .select2-selection {
+      &__rendered {
+        color: $sortTC;
+      }
+      &__arrow {
+        background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAGCAMAAAAmGUT3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAOVBMVEUAAACUYk2UYk2UYk2UYk2UYk2UYk2UYk2UYk2UYk2UYk2UYk2UYk2UYk2UYk2UYk2UYk2UYk0AAADcUd45AAAAEnRSTlMAt0B87ymc4BgEuc0UDtDyG8YZzbKwAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEgAACxIB0t1+/AAAAAd0SU1FB+IHEwscFw4lAzMAAAA3SURBVAjXHYpbDgAgCMOGooIP1PtfVrAfS5cUlBAkQubiUjgDtQmkVb/axxxdI1m2bf0Y5x7fBxeEAQfYFiTVAAAAAElFTkSuQmCC") no-repeat center;
+      }
+    }
+  }
+}
+
+.expand-list + .select2-container {
+  .selection {
+    .select2-selection {
+      &__rendered {
+        color: #000;
+        &:after {
+          background: #000;
+        }
+      }
+      &__arrow {
+        background: url("data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAICAQAAACIL71EAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAAHdElNRQfiBxMLGwNbvkGJAAAAbUlEQVQI123NoQ2DYBiE4acGgUHhSBVzMUCZ4N8AWccceDTBIVHUdA7y1bQpJX3d5b3cXSRXN+GX3pNB6E6iEwYyo5AOIgmjDHKT0L5FK0zyT6+wCA0aYVEc10ur3d1uVZ6eVTbhofKH2qz+xhfDWx2uvkpdUwAAAABJRU5ErkJggg==") no-repeat center;
+      }
+    }
   }
 }

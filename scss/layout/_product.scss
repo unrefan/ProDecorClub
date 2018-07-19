@@ -1,0 +1,101 @@
+.product {
+  @include displayFlex();
+  margin: -100px 0 0 0;
+
+  &__p-slider {
+
+  }
+  &__info-holder {
+    width: 45%;
+    height: 100vh;
+    padding: 130px 0 100px 40px;
+  }
+
+  &__back {
+    position: relative;
+    font-size: 10px;
+    font-family: "TTDrugs Thin";
+    margin-bottom: 30px;
+    color: #94624d;
+    &:before {
+      position: relative;
+      display: inline-block;
+      content: '';
+      width: 15px;
+      height: 1px;
+      background: #000;
+      bottom: 2px;
+      margin-right: 5px;
+    }
+  }
+
+  &__title {
+    color: #000;
+    text-align: left;
+    white-space: pre-line;
+    font-family: "Playfair Display";
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+
+  &__code {
+    margin: 0;
+    margin-bottom: 70px;
+    font-family: "TTDrugs Thin";
+    font-size: 16px;
+    color: #90614d;
+  }
+
+  &__specification {
+    margin-bottom: 90px;
+    p {
+      margin: 0;
+      color: #656666;
+    }
+  }
+
+  &__bottom {
+    @include displayFlex();
+    @include alignItems(center);
+  }
+
+  &__price {
+    margin: 0;
+    position: relative;
+    margin-right: 100px;
+    span {
+      font-family: "Playfair Display";
+      font-size: 30px;
+      margin-right: 3px;
+    }
+    span + span {
+      font-family: "Playfair Display Italic";
+      font-size: 12px;
+      position: relative;
+      bottom: 5px;
+    }
+  }
+
+  &__pro-decor-btn {
+    border: 0;
+    cursor: pointer;
+  }
+}
+
+.p-slider {
+  width: 50vw;
+  height: 100vh;
+  position: relative;
+
+  &__photo-holder {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  &__photo {
+    width: 100%;
+    height: 100%;
+  }
+
+}

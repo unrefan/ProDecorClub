@@ -184,7 +184,7 @@ function underlineAnimation() {
     if(active.length !== 0) {
       var rect = active[0].offsetLeft;
       var tr = 'translateX(' + rect + 'px)';
-      //console.log(tr, rect);
+      console.log(tr, rect);
       underline.css({
         'width': active[0].clientWidth,
         'transform': tr
@@ -329,7 +329,7 @@ function paralax() {
 		var	reduceY = 50;
 		x= Math.round((( e.pageX - rect.left) - width) / reduceX) * -1 + 8;
 		y= Math.round((( e.pageY - rect.top) - height) / reduceY) * -1 + 35;
-    tmp = 'rotate(-102.9deg) translate('+ x +'px, ' + y + 'px)';
+    tmp = 'rotate(-102.9deg) translate('+ x +'px, ' + y + 'px) translateZ(0)';
     paralax.css({
       'transform': tmp
     });
@@ -356,6 +356,55 @@ function closeMenu() {
   });
 }
 
+function select2Init() {
+  var select = $('section.catalog select');
+  select.each(function(i, el){
+    $(el).select2({
+      dropdownParent: $(el).parent()
+    });
+    $(el).hide();
+  });
+}
+
+function getProductsByCategory() {
+  var category = $('#category');
+  var container = $('#productContainer');
+  var selected, value;
+  var selectedContainer;
+  if(!category.length) return;
+
+  productChanger();
+  category.on('change', function(){
+    productChanger();
+    //console.log($(selected).text(), $(selected).val(), $(selected).attr('data-size'));
+  });
+
+  function productChanger() {
+    container.removeClass('p-card--thin');
+    container.html('');
+    selected = category[0].options[category[0].options.selectedIndex];
+    value = $(selected).attr('data-size');
+    if(value === "thin") {
+      container.addClass('p-card--thin');
+    }
+    selectedContainer = $('div.products div.products__wrapper[data-category='+ $(selected).val() +']');
+    selectedContainer.children().each(function(i, el){
+      $(el).clone().hide().appendTo(container).fadeIn(1000);
+    });
+  }
+}
+
+function initProductSlider() {
+  var slide = $('section.product .p-slider');
+
+  if(!slide.length) return;
+  slide.owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true
+  });
+}
+
 $(document).ready(function(){
   homeSliderHandler();
   aboutSliderHandler();
@@ -363,4 +412,7 @@ $(document).ready(function(){
   setWidthRentPattern();
   paralax();
   closeMenu();
+  select2Init();
+  getProductsByCategory();
+  initProductSlider();
 });

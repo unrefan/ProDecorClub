@@ -295,16 +295,13 @@
 
   &--home {
     width: 170px;
-    border: 2px solid #fff !important;
-    background: transparent !important;
-    color: #fff !important;
+    border: 2px solid;
   }
   &--white {
     position: relative;
-    color: #000 !important;
-    background: #fff url("../img/icons/button-border.png") no-repeat center !important;
     padding: 1px;
-    background-size: contain !important;
+    background-size: 100% !important;
+    @include transition(all .5s ease);
   }
 }
 

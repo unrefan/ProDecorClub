@@ -28,9 +28,9 @@
         </label>
         <ul class="menu__items">
           <li class="menu__item"><a href="./about.html" class="menu__link">О нас</a></li>
-          <li class="menu__item active"><a href="#" class="menu__link">каталог</a></li>
+          <li class="menu__item active"><a href="./catalog.html" class="menu__link">каталог</a></li>
           <li class="menu__item"><a href="./rent.html" class="menu__link">Условия аренды</a></li>
-          <li class="menu__item active"><a href="./contacts.html" class="menu__link">контакты</a></li>
+          <li class="menu__item"><a href="./contacts.html" class="menu__link">контакты</a></li>
           <div class="underline"></div>
         </ul>
     </div>
@@ -41,19 +41,23 @@
 <section class="catalog">
   <div class="category catalog__category">
     <div class="category__wrapper">
+
+    <!-- BEGIN: Category -->
       <div class="category__expand-list-holder">
         <select class="expand-list category__expand-list" name="category" id="category">
-          <option value="arcs">Арки</option>
-          <option value="vases">Вазы</option>
-          <option value="trees">Деревья</option>
-          <option value="candlestick">Подсвечники</option>
-          <option value="curbstone">Стойки/тумбы</option>
-          <option value="photozone">Фотозоны</option>
+          <option value="arcs" data-size="deffault" selected>Арки</option>
+          <option value="vases" data-size="thin">Вазы</option>
+          <option value="trees" data-size="deffault">Деревья</option>
+          <option value="candlestick" data-size="thin">Подсвечники</option>
+          <option value="curbstone" data-size="thin">Стойки/тумбы</option>
+          <option value="photozone" data-size="deffault">Фотозоны</option>
         </select>
       </div>
+    <!-- END: Category -->
 
+    <!-- BEGIN: Sort -->
       <div class="category__sort-holder">
-        <select class="sort category__sort" name="category" id="category">
+        <select class="sort category__sort" name="sort" id="sort">
           <option value="arcs">Сортировать по</option>
           <option value="arcs">Цена по возрастанию</option>
           <option value="candlestick">Цена по убыванию</option>
@@ -61,61 +65,290 @@
           <option value="trees">Популярности</option>
         </select>
       </div>
+    <!-- END: Sort -->
     </div>
   </div>
 
   <div class="products catalog__products">
-    <div class="products__wrapper">
+
+    <!-- BEGIN: common container -->
+    <div id="productContainer" class="products__wrapper"></div>
+    <!-- END: common container -->
+
+    <!-- BEGIN: arcs -->
+    <div  class="products__wrapper" data-category="arcs">
       <figure class="p-card products__p-card">
-        <picture class="p-card__photo">
-          <img src="" alt="product" />
-        </picture>
+        <a href="./products/arcs/arc1.html">
+          <picture class="p-card__photo">
+            <img src="./img/catalog/arcs/arch1.jpg" alt="product" />
+          </picture>
+        </a>
         <figcaption class="p-card__name">Diamonds</figcaption>
         <figcaption class="p-card__price">3 500 grn</figcaption>
       </figure>
 
       <figure class="p-card products__p-card">
-        <picture class="p-card__photo">
-          <img src="" alt="product" />
-        </picture>
+        <a href="#">
+          <picture class="p-card__photo">
+            <img src="./img/catalog/arcs/arch3.jpg" alt="product" />
+          </picture>
+        </a>
         <figcaption class="p-card__name">Diamonds</figcaption>
         <figcaption class="p-card__price">3 500 grn</figcaption>
       </figure>
     </div>
+    <!-- END: arcs -->
 
-    <div class="products__wrapper">
-      <figure class="p-card p-card--thin products__p-card">
-        <picture class="p-card__photo">
-          <img src="" alt="product" />
-        </picture>
+    <!-- BEGIN: vases -->
+    <div class="products__wrapper p-card--thin" data-category="vases">
+      <figure class="p-card products__p-card">
+        <a href="#">
+          <picture class="p-card__photo">
+            <img src="./img/catalog/vases/v1.jpg" alt="product" />
+          </picture>
+        </a>
         <figcaption class="p-card__name">Diamonds</figcaption>
         <figcaption class="p-card__price">3 500 grn</figcaption>
       </figure>
 
-      <figure class="p-card p-card--thin products__p-card">
-        <picture class="p-card__photo">
-          <img src="" alt="product" />
-        </picture>
+      <figure class="p-card products__p-card">
+        <a href="#">
+          <picture class="p-card__photo">
+            <img src="./img/catalog/vases/v2.jpg" alt="product" />
+          </picture>
+        </a>
         <figcaption class="p-card__name">Diamonds</figcaption>
         <figcaption class="p-card__price">3 500 grn</figcaption>
       </figure>
 
-      <figure class="p-card p-card--thin products__p-card">
-        <picture class="p-card__photo">
-          <img src="" alt="product" />
-        </picture>
+      <figure class="p-card products__p-card">
+        <a href="#">
+          <picture class="p-card__photo">
+            <img src="./img/catalog/vases/v3.jpg" alt="product" />
+          </picture>
+        </a>
         <figcaption class="p-card__name">Diamonds</figcaption>
         <figcaption class="p-card__price">3 500 grn</figcaption>
       </figure>
 
-      <figure class="p-card p-card--thin products__p-card">
-        <picture class="p-card__photo">
-          <img src="" alt="product" />
-        </picture>
+      <figure class="p-card products__p-card">
+        <a href="#">
+          <picture class="p-card__photo">
+            <img src="./img/catalog/vases/v4.jpg" alt="product" />
+          </picture>
+        </a>
+        <figcaption class="p-card__name">Diamonds</figcaption>
+        <figcaption class="p-card__price">3 500 grn</figcaption>
+      </figure>
+
+      <figure class="p-card products__p-card">
+        <a href="#">
+          <picture class="p-card__photo">
+            <img src="./img/catalog/vases/v5.jpg" alt="product" />
+          </picture>
+        </a>
+        <figcaption class="p-card__name">Diamonds</figcaption>
+        <figcaption class="p-card__price">3 500 grn</figcaption>
+      </figure>
+
+      <figure class="p-card products__p-card">
+        <a href="#">
+          <picture class="p-card__photo">
+            <img src="./img/catalog/vases/v6.jpg" alt="product" />
+          </picture>
+        </a>
+        <figcaption class="p-card__name">Diamonds</figcaption>
+        <figcaption class="p-card__price">3 500 grn</figcaption>
+      </figure>
+
+      <figure class="p-card products__p-card">
+        <a href="#">
+          <picture class="p-card__photo">
+            <img src="./img/catalog/vases/v7.jpg" alt="product" />
+          </picture>
+        </a>
         <figcaption class="p-card__name">Diamonds</figcaption>
         <figcaption class="p-card__price">3 500 grn</figcaption>
       </figure>
     </div>
+    <!-- END: vases -->
+
+    <!-- BEGIN: trees -->
+    <div class="products__wrapper" data-category="trees">
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/trees/tr1.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/trees/tr2.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+    </div>
+    <!-- END: trees -->
+
+    <!-- BEGIN: candlestick -->
+    <div class="products__wrapper p-card--thin" data-category="candlestick">
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/candlestick/cs1.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/candlestick/cs2.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/candlestick/cs3.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/candlestick/cs4.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/candlestick/cs5.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/candlestick/cs6.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/candlestick/cs7.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+    </div>
+    <!-- END: candlestick -->
+
+    <!-- BEGIN: curbstone -->
+    <div class="products__wrapper p-card--thin" data-category="curbstone">
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/curbstone/cb1.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/curbstone/cb2.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/curbstone/cb3.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/curbstone/cb4.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/curbstone/cb5.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/curbstone/cb6.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+
+    </div>
+    <!-- END: curbstone -->
+
+    <!-- BEGIN: photozone -->
+    <div class="products__wrapper" data-category="photozone">
+        <figure class="p-card products__p-card">
+          <a href="#">
+            <picture class="p-card__photo">
+              <img src="./img/catalog/photozone/pz1.jpg" alt="product" />
+            </picture>
+          </a>
+          <figcaption class="p-card__name">Diamonds</figcaption>
+          <figcaption class="p-card__price">3 500 grn</figcaption>
+        </figure>
+    </div>
+    <!-- END: photozone -->
   </div>
 
   <div class="subscribe rent__subscribe">
@@ -146,6 +379,7 @@
 </footer>
 <!-- END: footer -->
 <script src="./js/plugins/jquery-3.3.1.min.js"></script>
+<script src="./js/plugins/select2.min.js"></script>
 <script src="./js/main.js"></script>
 </body>
 </html>
