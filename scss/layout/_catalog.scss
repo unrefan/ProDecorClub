@@ -40,6 +40,7 @@
     position: relative;
 
     .select2-container {
+      z-index: 990;
       .select2-results {
         &__options {
           width: 405px;
@@ -78,6 +79,7 @@
     position: relative;
 
     .select2-container {
+      z-index: 990;
       .select2-search {
         display: none;
       }

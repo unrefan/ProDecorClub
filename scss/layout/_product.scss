@@ -16,21 +16,18 @@
     font-size: 10px;
     font-family: "TTDrugs Thin";
     margin-bottom: 30px;
-    color: #94624d;
     &:before {
       position: relative;
       display: inline-block;
       content: '';
       width: 15px;
       height: 1px;
-      background: #000;
       bottom: 2px;
       margin-right: 5px;
     }
   }
 
   &__title {
-    color: #000;
     text-align: left;
     white-space: pre-line;
     font-family: "Playfair Display";
@@ -43,14 +40,12 @@
     margin-bottom: 70px;
     font-family: "TTDrugs Thin";
     font-size: 16px;
-    color: #90614d;
   }
 
   &__specification {
     margin-bottom: 90px;
     p {
       margin: 0;
-      color: #656666;
     }
   }
 
@@ -89,7 +84,7 @@
 
   &__photo-holder {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
   }
 
@@ -98,4 +93,51 @@
     height: 100%;
   }
 
+  .owl-stage-outer {
+    overflow: hidden;
+  }
+
+  .owl-item {
+    display: inline-block;
+  }
+
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+
+    .owl-prev,
+    .owl-next {
+      position: absolute;
+      z-index: 999;
+      background: transparent url("../img/icons/arrow-slider-brown.png") no-repeat center;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      border:0;
+      outline: none;
+      color: transparent;
+      cursor: pointer;
+      &:active,
+      &:hover {
+        outline: none;
+      }
+      &:before {
+        position: absolute;
+        content: '';
+        width: 70px;
+        height: 2px;
+        top: calc(50% - 1px);
+        left: -55px;
+      }
+    }
+    .owl-prev {
+      left: 20px;
+      transform: rotate(180deg);
+    }
+    .owl-next {
+      right: 20px;
+    }
+  }
 }

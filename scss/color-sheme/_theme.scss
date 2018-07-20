@@ -240,3 +240,37 @@ p.subscribe__text {
     }
   }
 }
+
+//############################### product
+.product {
+  &__back,
+  &__back:link,
+  &__back:visited {
+    color: #94624d;
+    &:before {
+      @include linearGradientToRight( lighten(#94624d, 20%), #94624d );
+    }
+  }
+
+  &__title {
+    color: #000;
+  }
+
+  &__code {
+    color: #90614d;
+  }
+
+  &__specification {
+    p {
+      color: #656666;
+    }
+  }
+}
+.p-slider {
+  .owl-prev,
+  .owl-next {
+    &:before {
+      background: #ded8d7;
+    }
+  }
+}

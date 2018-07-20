@@ -250,3 +250,12 @@ body {
     filter: blur(10px);
   }
 }
+
+.productHeaderMargin {
+  margin-right: auto;
+  margin-left: calc(50vw - 150px);
+  @media screen and (max-width: 1199px) {
+    margin-right: 85px;
+    margin-left: initial;
+  }
+}
