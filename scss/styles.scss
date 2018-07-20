@@ -39,6 +39,9 @@ body {
   span {
     overflow: hidden;
     display: block;
+    &.active {
+
+    }
   }
   &__1 {
     transform: rotate(30.5deg);
@@ -258,7 +261,4 @@ body {
     margin-right: 85px;
     margin-left: initial;
   }
-}
-body{
-  display:none;
 }
