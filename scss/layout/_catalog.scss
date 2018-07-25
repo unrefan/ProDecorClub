@@ -127,7 +127,9 @@
     .select2-selection {
       outline: none;
       &__rendered {
-        font-family: "TTDrugs Thin";
+        //font-family: "TTDrugs Thin";
+        font-family: "Roboto";
+        font-weight: 300;
         font-size: 12px;
         cursor: pointer;
         margin-right: 12px;
@@ -150,7 +152,9 @@
       outline: none;
       &__rendered {
         position: relative;
-        font-family: "Playfair Display";
+        //font-family: "Playfair Display";
+        font-family: "Roboto";
+        letter-spacing: -.8px;
         font-size: 35px;
         cursor: pointer;
         &:after {
@@ -250,9 +254,13 @@
   &__name {
     width: 100%;
     margin-bottom: 5px;
+    font-family: "Roboto";
+    font-weight: 300;
   }
 
   &__price {
     width: 100%;
+    font-family: "Roboto";
+    font-weight: 300;
   }
 }

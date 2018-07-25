@@ -14,7 +14,9 @@
   &__back {
     position: relative;
     font-size: 10px;
-    font-family: "TTDrugs Thin";
+    //font-family: "TTDrugs Thin";
+    font-family: "Roboto";
+    font-weight: 300;
     margin-bottom: 30px;
     &:before {
       position: relative;
@@ -30,7 +32,9 @@
   &__title {
     text-align: left;
     white-space: pre-line;
-    font-family: "Playfair Display";
+    //font-family: "Playfair Display";
+    font-family: "Roboto";
+    font-weight: 300;
     font-size: 30px;
     margin-bottom: 30px;
   }
@@ -38,7 +42,9 @@
   &__code {
     margin: 0;
     margin-bottom: 70px;
-    font-family: "TTDrugs Thin";
+    //font-family: "TTDrugs Thin";
+    font-family: "Roboto";
+    font-weight: 300;
     font-size: 16px;
   }
 
