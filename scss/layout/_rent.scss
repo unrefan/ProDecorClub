@@ -33,12 +33,14 @@
   &__title {
     margin-bottom: 25px;
     font-size: 22px;
+    font-family: "Roboto";
   }
 
   &__text {
-    font-family: "TTDrugs Thin";
+    //font-family: "TTDrugs Thin";
+    font-family: "Roboto";
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     color: #000;
     @include displayFlex();
     margin-bottom: 90px;

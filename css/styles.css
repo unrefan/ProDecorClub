@@ -894,8 +894,9 @@ template {
   -ms-flex-align: center;
   align-items: center;
   max-width: 100%;
-  font-family: 'Playfair Display SC';
-  font-size: 11.05px;
+  font-family: "Roboto";
+  font-size: 14.05px;
+  font-weight: 300;
   padding-top: 20px;
   height: 80px; }
 
@@ -1097,7 +1098,9 @@ template {
       margin-right: 0;
       margin-bottom: 15px; } }
 .menu__link {
-  font-weight: 900; }
+  font-family: "Roboto";
+  font-size: 14.05px;
+  font-weight: 300; }
   .menu__link:hover {
     text-decoration: none; }
 
@@ -1114,8 +1117,9 @@ template {
   -webkit-box-flex: 0;
   -ms-flex: 0 0 100%;
   flex: 0 0 100%;
-  font-family: 'Playfair Display SC';
-  font-size: 11.06px;
+  font-family: "Roboto";
+  font-size: 14.06px;
+  font-weight: 300;
   margin: auto 0 0 0;
   max-width: 100%;
   height: 80px;
@@ -1455,7 +1459,8 @@ template {
     max-width: 480px;
     font-size: 16px;
     line-height: 18px;
-    font-family: 'TTDrugs Thin'; }
+    font-family: "Roboto";
+    font-weight: 300; }
 
 .services {
   width: 100%;
@@ -1583,12 +1588,14 @@ template {
     font-size: 24.79px;
     text-align: left;
     margin: 0 0 25px 0;
-    font-family: 'Playfair Display SC'; }
+    font-family: "Roboto";
+    font-weight: 300; }
   .card__text {
     font-size: 14px;
     white-space: pre-line;
     margin: 0 0 25px 0;
-    font-family: 'TTDrugs Thin';
+    font-family: "Roboto";
+    font-weight: 300;
     color: #000; }
   .card__pro-decor-btn {
     margin-left: auto;
@@ -1609,8 +1616,9 @@ template {
   height: 40px;
   text-transform: uppercase;
   font-size: 10.46px;
-  font-family: 'TTDrugs Thin'; }
-  .pro-decor-btn--home {
+  font-family: "Roboto";
+  font-weight: 300; }
+  .pro-decor-btn--home, .pro-decor-btn--home:link, .pro-decor-btn--home:visited {
     width: 170px;
     border: 2px solid; }
   .pro-decor-btn--white {
@@ -1640,11 +1648,12 @@ template {
 
 p.subscribe__text {
   font-size: 22.07px;
-  font-family: 'Playfair Display SC';
+  font-family: "Roboto";
+  font-weight: 300;
   line-height: 26px;
   margin: 0;
-  font-weight: 600;
-  letter-spacing: .5px;
+  font-weight: 300;
+  letter-spacing: -.8px;
   text-transform: none;
   margin-bottom: 20px; }
   @media screen and (min-width: 0px) and (max-width: 767px) {
@@ -1677,8 +1686,9 @@ p.subscribe__text {
     border: 1px solid;
     padding-left: 20px;
     font-size: 11.05px;
-    font-weight: 900;
-    font-family: 'TTDrugs Thin';
+    font-weight: 300;
+    font-family: "Roboto";
+    font-weight: 300;
     outline: none; }
     @media screen and (min-width: 0px) and (max-width: 767px) {
       .pro-decor-input__field {
@@ -1732,11 +1742,12 @@ p.subscribe__text {
         width: 100%; } }
   .rent__title {
     margin-bottom: 25px;
-    font-size: 22px; }
+    font-size: 22px;
+    font-family: "Roboto"; }
   .rent__text {
-    font-family: "TTDrugs Thin";
+    font-family: "Roboto";
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     color: #000;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1811,18 +1822,18 @@ p.subscribe__text {
       cursor: pointer; }
 
 .phone--contacts {
-  font-family: "Playfair Display";
+  font-family: "Roboto";
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: 15px; }
   .phone--contacts .phone__number {
     color: #000 !important; }
 
 .write-us__title {
   color: #000 !important;
-  font-family: "Playfair Display";
+  font-family: "Roboto";
   font-size: 26px;
-  font-weight: 600;
+  font-weight: 300;
   margin-bottom: 20px; }
 .write-us__pro-decor-input {
   margin-bottom: 7px; }
@@ -1942,7 +1953,8 @@ p.subscribe__text {
     .sort + .select2-container .selection .select2-selection {
       outline: none; }
       .sort + .select2-container .selection .select2-selection__rendered {
-        font-family: "TTDrugs Thin";
+        font-family: "Roboto";
+        font-weight: 300;
         font-size: 12px;
         cursor: pointer;
         margin-right: 12px; }
@@ -1960,7 +1972,8 @@ p.subscribe__text {
       outline: none; }
       .expand-list + .select2-container .selection .select2-selection__rendered {
         position: relative;
-        font-family: "Playfair Display";
+        font-family: "Roboto";
+        letter-spacing: -.8px;
         font-size: 35px;
         cursor: pointer; }
         .expand-list + .select2-container .selection .select2-selection__rendered:after {
@@ -2046,9 +2059,13 @@ p.subscribe__text {
       padding: 0; }
   .p-card__name {
     width: 100%;
-    margin-bottom: 5px; }
+    margin-bottom: 5px;
+    font-family: "Roboto";
+    font-weight: 300; }
   .p-card__price {
-    width: 100%; }
+    width: 100%;
+    font-family: "Roboto";
+    font-weight: 300; }
 
 .product {
   display: -webkit-box;
@@ -2062,7 +2079,8 @@ p.subscribe__text {
   .product__back {
     position: relative;
     font-size: 10px;
-    font-family: "TTDrugs Thin";
+    font-family: "Roboto";
+    font-weight: 300;
     margin-bottom: 30px; }
     .product__back:before {
       position: relative;
@@ -2075,13 +2093,15 @@ p.subscribe__text {
   .product__title {
     text-align: left;
     white-space: pre-line;
-    font-family: "Playfair Display";
+    font-family: "Roboto";
+    font-weight: 300;
     font-size: 30px;
     margin-bottom: 30px; }
   .product__code {
     margin: 0;
     margin-bottom: 70px;
-    font-family: "TTDrugs Thin";
+    font-family: "Roboto";
+    font-weight: 300;
     font-size: 16px; }
   .product__specification {
     margin-bottom: 90px; }
@@ -2570,7 +2590,9 @@ body {
     color: #fff;
     margin-bottom: 15px;
     position: relative;
-    z-index: 1; }
+    z-index: 1;
+    font-family: "Roboto";
+    font-weight: 300; }
   .catalog-redirect__back {
     width: 100%;
     height: 100%;

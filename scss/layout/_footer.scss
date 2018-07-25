@@ -4,8 +4,10 @@
   @include alignItems(center);
   @include flex(0, 0, 100%);
 
-  font-family: 'Playfair Display SC';
-  font-size: 11.06px;
+  //font-family: 'Playfair Display SC';
+  font-family: "Roboto";
+  font-size: 14.06px;
+  font-weight: 300;
   margin: auto 0 0 0;
   max-width: 100%;
   height: 80px;

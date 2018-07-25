@@ -162,7 +162,7 @@ function aboutSliderHandler() {
   if(slide.length) {
     setPaginationAboutCard(slide);
     removeDotsText(slide);
-    sliderInit(slide, options);
+    slide.slick(options);
     sliderAboutChange(slide)
   }
 }
