@@ -1,10 +1,23 @@
 function removeDotsText(slide) {
   slide.on('init', function(e, slick){
-    mouseWheel(slide);
     var dots = slide.find('li button');
     dots.each(function(i, el){
       $(el).text('');
     });
+  });
+}
+
+function dotsCentered(slide) {
+  slide.on('init', function(e, slick){
+    var dots = slide.find('.slick-dots');
+    var height = dots[0].clientHeight;
+    dots.css('top', 'calc(50% - '+ height/2 +'px)');
+  });
+}
+
+function addScroll(slide) {
+  slide.on('init', function(e, slick){
+    mouseWheel(slide);
   });
 }
 
@@ -46,13 +59,6 @@ function sliderHomeChangeTranslate(slide) {
   var scale = 'scale(.7)';
   var step = 75;
 
-  // if(window.innerWidth >= 768 && window.innerWidth < 1200) {
-  //    scale = 'scale(1)';
-  // } else if (window.innerWidth >= 0 && window.innerWidth < 768) {
-  //   scale = 'scale(2.4)';
-  //   step = 175;
-  // }
-
   slide.on('beforeChange', function(e, slick, cSlide, nextSlide){
     if(nextSlide - cSlide > 0) {
       translateUp();
@@ -89,13 +95,6 @@ function setTranslateY() {
   var step = 75;
   tr.push(t);
 
-  // if(window.innerWidth >= 768 && window.innerWidth < 1200) {
-  //   scale = 'scale(1)';
-  // } //else if (window.innerWidth >= 0 && window.innerWidth < 768) {
-  //   scale = 'scale(2.4)';
-  //   step = 175;
-  // }
-
   pics.each(function(i, el){
     tmp = 'translate(-50%, ' + t + '%)' + scale;
     $(el).css({
@@ -122,6 +121,8 @@ function homeSliderHandler() {
   }
   if(slide.length) {
     setTranslateY();
+    dotsCentered(slide);
+    addScroll(slide);
     removeDotsText(slide);
     sliderInit(slide, options);
     sliderHomeChangeTranslate(slide);
@@ -162,7 +163,7 @@ function aboutSliderHandler() {
   if(slide.length) {
     setPaginationAboutCard(slide);
     removeDotsText(slide);
-    slide.slick(options);
+    sliderInit(slide, options);
     sliderAboutChange(slide)
   }
 }

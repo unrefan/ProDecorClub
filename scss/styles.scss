@@ -22,89 +22,6 @@ body {
   }
 }
 
-.hexagon {
-  width: 500px;
-  height: 470px;
-  position: absolute;
-  left: calc(50% - 250px);
-  top: calc(50% - 235px);
-  transform: scale(1.4);
-  &__border {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    background: url("../img/home/hex-border.png") no-repeat center;
-  }
-  span {
-    overflow: hidden;
-    display: block;
-  }
-  &__1 {
-    transform: rotate(30.5deg);
-    position: absolute;
-    top: 8.5%;
-    left: -28px;
-    width: 553px;
-    height: 454px;
-  }
-  &__2 {
-    transform: rotate(118.5deg);
-    width: 643px;
-    height: 452px;
-    position: absolute;
-    top: 9%;
-    left: -66px;
-  }
-  &__3 {
-    position: absolute;
-    width: 550px;
-    height: 490px;
-    transform: rotate(-75.5deg);
-    left: -7%;
-  }
-  &__4 {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    transform: rotate(123.3deg);
-    left: 2%;
-    top: 12%;
-  }
-  &__5 {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    transform: rotate(-30deg);
-    left: -9%;
-    top: 8%;
-  }
-  &__6 {
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    transform: rotate(-63.9deg);
-    left: 5%;
-    top: 0.8%;
-  }
-  &__pic {
-    overflow: visible;
-    width: 100%;
-    height: 100%;
-    transform: rotate(-102.9deg) translate(5px, 35px);
-    position: relative;
-  }
-  &__clipped-pic {
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(.6);
-    transition: all .1s linear;
-  }
-}
 .hexagon2 {
   width: 500px;
   height: 470px;
@@ -115,7 +32,10 @@ body {
   @media screen and (min-width: 0px) and (max-width: 767px) {
     transform: scale(.4);
   }
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @media screen and (min-width: 768px) and (max-width: 919px) {
+    transform: scale(.8);
+  }
+  @media screen and (min-width: 920px) and (max-width: 1199px) {
     transform: scale(1);
   }
   &__border {
@@ -198,13 +118,17 @@ body {
     transform: translate(-50%, -50%) scale(.8) translateZ(0);
     transition: all .9s ease;
     @media screen and (min-width: 0px) and (max-width: 767px) {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    @media screen and (min-width: 768px) and (max-width: 919px) {
       transform: translate(-50%, -50%) scale(1);
     }
-    @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @media screen and (min-width: 920px) and (max-width: 1199px) {
       transform: translate(-50%, -50%) scale(1);
     }
   }
 }
+
 .main {
   width: 100%;
 }
@@ -229,6 +153,24 @@ body {
     left: calc(50% - 125px);
     a {
       margin: 0 auto;
+    }
+  }
+  @media screen and (min-width: 1000px) and (max-width: 1199px) and (min-height: 600px) and (max-height: 800px) {
+    width: 100%;
+    left: 0;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: calc(50% - 60px);
+    a {
+      margin-right: 40px;
+      margin-left: auto;
+    }
+    p {
+      width: 180px;
+      margin-left: 100px;
+      font-size: 16px;
     }
   }
   &__descriptions {
